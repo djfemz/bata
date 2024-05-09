@@ -97,7 +97,7 @@ func TestCreateTransactionWithInvalidTransactionTypeFails(t *testing.T) {
 	transactionService = services.NewTransactionService(mockTransactionService)
 	transactionRequest := &requests.CreateTransactionRequest{
 		AccountNumber: "2212160567",
-		Type:          utils.DEBIT_TRANSACTION,
+		Type:          "DEBT",
 		Amount:        1000.00,
 	}
 	createTransactionResponse, err := transactionService.PerformTransaction(transactionRequest)
